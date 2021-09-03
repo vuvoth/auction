@@ -1,9 +1,15 @@
 //// SPDX-License-Identifier: MIT
 pragma solidity 0.8.4;
 
-import "@openzeppelin/contracts/token/ERC777/IERC777.sol";
 
 abstract contract AbstractAuctionFactory {
-	function buy() external virtual payable{
-	}
+    function createAuction() external payable virtual;
+
+    function bidNFT() external payable virtual {}
+
+    function withdrawByCreater() external payable virtual {}
+
+    function withdrawByBidder() external payable virtual {}
+
+    function joinNetwork() external payable virtual {}
 }
